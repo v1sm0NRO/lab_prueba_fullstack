@@ -6,7 +6,7 @@ services:
     restart: always
     container_name: postgres_db
     environment:
-      POSTGRES_USER: user
+      POSTGRES_USER: ash
       POSTGRES_PASSWORD: password
       POSTGRES_DB: mydb
     ports:
@@ -23,7 +23,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: postgres://user:password@db:5432/mydb
+      DATABASE_URL: postgres://ash:password@db:5433/mydb
     volumes:
       - ./backend:/app
     command: npm run dev
